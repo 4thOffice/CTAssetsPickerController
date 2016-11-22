@@ -100,13 +100,13 @@
  */
 - (void)setupViews
 {
-    UIImage *shadowImage = [UIImage ctassetsPickerImageNamed:@"CheckmarkShadow"];
+    UIImage *shadowImage = [UIImage imageNamed:@"ct-checkmark-shadow"];
     UIImageView *shadowImageView = [[UIImageView alloc] initWithImage:shadowImage];
     shadowImageView.userInteractionEnabled = NO;
     self.shadowImageView = shadowImageView;
     [self addSubview:self.shadowImageView];
     
-    UIImage *checkmarkImage = [UIImage ctassetsPickerImageNamed:@"Checkmark"];
+    UIImage *checkmarkImage = [UIImage imageNamed:@"ct-checkmark"];
     checkmarkImage = [checkmarkImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     UIImageView *checkmarkImageView = [[UIImageView alloc] initWithImage:checkmarkImage];
     checkmarkImageView.userInteractionEnabled = NO;
@@ -144,7 +144,7 @@
 {
     if (!self.didSetupConstraints)
     {
-        CGSize size = [UIImage ctassetsPickerImageNamed:@"CheckmarkShadow"].size;
+        CGSize size = [UIImage imageNamed:@"ct-checkmark-shadow"].size;
         
         [NSLayoutConstraint autoSetPriority:UILayoutPriorityRequired forConstraints:^{
             [self autoSetDimensionsToSize:size];
