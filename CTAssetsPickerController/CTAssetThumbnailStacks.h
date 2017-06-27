@@ -29,11 +29,15 @@
 
 @interface CTAssetThumbnailStacks : UIView
 
+NS_ASSUME_NONNULL_BEGIN
+
 @property (nonatomic, assign) CGSize thumbnailSize;
 @property (nonatomic, copy, readonly) NSArray<CTAssetThumbnailView*> *thumbnailViews;
 @property (nonatomic, assign, readonly) UIEdgeInsets edgeInsets;
 
 - (nonnull CTAssetThumbnailView *)thumbnailAtIndex:(NSUInteger)index;
 - (void)setHighlighted:(BOOL)highlighted;
+
+NS_ASSUME_NONNULL_END
 
 @end
