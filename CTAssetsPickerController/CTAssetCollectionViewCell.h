@@ -47,8 +47,12 @@
 
 @property (nonatomic, weak, nullable) UIColor *selectedBackgroundColor UI_APPEARANCE_SELECTOR;
 
+NS_ASSUME_NONNULL_BEGIN
+
 
 - (instancetype)initWithThumbnailSize:(CGSize)size reuseIdentifier:(nullable NSString *)reuseIdentifier;
 - (void)bind:(nonnull PHAssetCollection *)collection count:(NSUInteger)count;
+
+NS_ASSUME_NONNULL_END
 
 @end
