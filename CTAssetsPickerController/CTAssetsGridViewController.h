@@ -42,8 +42,12 @@
 
 @interface CTAssetsGridViewController : UICollectionViewController
 
+NS_ASSUME_NONNULL_BEGIN
+
 @property (nonatomic, weak) id<CTAssetsGridViewControllerDelegate> delegate;
 @property (nonatomic, strong, nonnull) PHAssetCollection *assetCollection;
+
+NS_ASSUME_NONNULL_END
 
 @end
 
